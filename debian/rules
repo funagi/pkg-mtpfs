@@ -36,7 +36,7 @@ build-stamp:
 		--build=$(DEB_BUILD_GNU_TYPE) \
 		--prefix=/usr \
 		--mandir=\$${prefix}/share/man \
-		CFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs"
+		CFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs,--as-needed"
 	$(MAKE)
 	touch $@
 
