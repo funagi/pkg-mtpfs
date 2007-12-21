@@ -1,0 +1,42 @@
+.TH MTPFS 1 "December 21, 2007"
+
+.SH NAME
+mtpfs \- FUSE filesystem for Media Transfer Protocol devices
+
+.SH SYNOPSIS
+.B mtpfs
+.I mountpoint
+.RI [options]
+.SH DESCRIPTION
+.B mtpfs
+is a FUSE filesystem that supports reading and writing from MTP (Media
+Transfer Protocol) devices, such as MP3 players, video players or digital
+cameras.
+
+.PP
+When files are written to the filesystem their file extension is checked
+to determine the filetype. This means that images, videos and ICS files
+(for example) will be recognised by the player rather than setting filetype
+to `unknown'.
+
+.PP
+There is also a virtual directory called "/Playlists" which contains your
+playlists as .m3u files. If you write an m3u file to that directory a playlist
+will be created as well. m3u files are just a text file containing a list of
+all tracks you want in the playlist one per line).
+
+.SH OPTIONS
+.B mtpfs
+accepts the following options:
+.TP
+.B \-h
+Show summary of options.
+
+.SH "SEE ALSO"
+.BR fusermount(1)
+
+.SH AUTHORS
+Miklos Szeredi <miklos@szeredi.hu>, Chris Debenham <chris@debenham.com>.
+.PP
+This manual page was written by Chris Lamb <chris@chris-lamb.co.uk>,
+for the Debian project (but may be used by others).

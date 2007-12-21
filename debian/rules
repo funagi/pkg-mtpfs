@@ -1,0 +1,75 @@
+#!/usr/bin/make -f
+
+#export DH_VERBOSE=1
+
+DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+CFLAGS = -Wall -g
+
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+else
+	CFLAGS += -O2
+endif
+
+upstream:
+	# Requires: subversion
+	#                              awk '/Version:/ {sub(/-[0-9]+/, "", $2);print $2}'
+	VERSION=`dpkg-parsechangelog | awk '/Version:/ {print $$2}' | sed 's/-[0-9]*$\//g'`; \
+		TAR=mtpfs_$$VERSION.orig.tar; \
+		TEMPDIR=`mktemp -d`; OLDPWD=`pwd`; cd $$TEMPDIR; \
+		svn co http://mtpfs.googlecode.com/svn/trunk/ mtpfs; \
+		find . -depth -type d -name ".svn" -exec rm -rf {} \; ; \
+		tar cvvf $$TAR mtpfs; gzip -9 $$TAR; \
+		rm -rf mtpfs/; cd $$OLDPWD; echo "Upstream tarball: $$TEMPDIR/$$TAR.gz"
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+	cp -f /usr/share/misc/config.sub config.sub
+	cp -f /usr/share/misc/config.guess config.guess
+	./autogen.sh
+	./configure \
+		--host=$(DEB_HOST_GNU_TYPE) \
+		--build=$(DEB_BUILD_GNU_TYPE) \
+		--prefix=/usr \
+		--mandir=\$${prefix}/share/man \
+		CFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs"
+	$(MAKE)
+	touch $@
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	test -f Makefile && $(MAKE) distclean || true
+	rm -f aclocal.m4 config.guess config.sub configure depcomp install-sh Makefile.in missing
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/mtpfs
+
+binary-indep: build install
+
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs NEWS README
+	dh_installchangelogs
+	dh_installman debian/manpages/mtpfs.1
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install

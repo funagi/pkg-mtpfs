@@ -1,0 +1,5 @@
+mtpfs (0.8+svn11-1) unstable; urgency=low
+
+  * Initial release (Closes: #457236)
+
+ -- Chris Lamb <chris@chris-lamb.co.uk>  Thu, 20 Dec 2007 22:07:14 +0000
