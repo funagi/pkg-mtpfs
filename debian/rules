@@ -16,11 +16,14 @@ upstream:
 	# Requires: subversion
 	VERSION=`dpkg-parsechangelog | awk '/Version:/ {print $$2}' | sed 's/-[0-9]*$\//g'`; \
 		TAR=mtpfs_$$VERSION.orig.tar; \
-		TEMPDIR=`mktemp -d`; OLDPWD=`pwd`; cd $$TEMPDIR; \
+		TEMPDIR=`mktemp -d`; \
+		cd $$TEMPDIR; \
 		svn co http://mtpfs.googlecode.com/svn/trunk/ mtpfs; \
 		find . -depth -type d -name ".svn" -exec rm -rf {} \; ; \
-		tar cvvf $$TAR mtpfs; gzip -9 $$TAR; \
-		rm -rf mtpfs/; cd $$OLDPWD; echo "Upstream tarball: $$TEMPDIR/$$TAR.gz"
+		tar cvvf $$TAR mtpfs; \
+		gzip -9 $$TAR; \
+		rm -rf mtpfs/; \
+		echo "Upstream tarball: $$TEMPDIR/$$TAR.gz"
 
 build: build-stamp
 build-stamp:
