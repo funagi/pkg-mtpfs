@@ -24,5 +24,4 @@ The Debian packaging is (C) 2007, Chris Lamb <chris@chris-lamb.co.uk> and
 is licensed under the GPL.
 
 On Debian systems, you can find the GNU General Public License in the file
-/usr/share/common-licenses/GPL and the GNU Lesser General Public License in
-the file /usr/share/common-licenses/LGPL.
+/usr/share/common-licenses/GPL.
