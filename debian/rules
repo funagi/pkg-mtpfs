@@ -14,7 +14,8 @@ endif
 
 upstream:
 	# Requires: subversion
-	VERSION=`dpkg-parsechangelog | awk '/Version:/ {print $$2}' | sed 's/-[0-9]*$\//g'`; \
+	set -eu; \
+		VERSION=`dpkg-parsechangelog | awk '/Version:/ {print $$2}' | sed 's/-[0-9]*$\//g'`; \
 		TAR=mtpfs_$$VERSION.orig.tar; \
 		TEMPDIR=`mktemp -d`; \
 		cd $$TEMPDIR; \
@@ -63,7 +64,6 @@ binary-arch: build install
 	dh_installdocs NEWS README
 	dh_installchangelogs
 	dh_installman debian/manpages/mtpfs.1
-	dh_link
 	dh_strip
 	dh_compress
 	dh_fixperms
