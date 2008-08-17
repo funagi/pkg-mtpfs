@@ -6,8 +6,9 @@ mtpfs (0.8+svn17-1) unstable; urgency=low
   * Move to debhelper 7.
   * Bump Standards-Version to 3.8.0.
   * Rework and rename 'get-orig-source' target.
+  * Add /sbin/mount.mtpfs symlink for fstab integration.
 
- -- Chris Lamb <chris@chris-lamb.co.uk>  Sun, 17 Aug 2008 21:43:05 +0100
+ -- Chris Lamb <chris@chris-lamb.co.uk>  Sun, 17 Aug 2008 21:59:17 +0100
 
 mtpfs (0.8+svn11-1) unstable; urgency=low
 
