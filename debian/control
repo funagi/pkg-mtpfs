@@ -1,5 +1,5 @@
 Source: mtpfs
-Section: interpreters
+Section: utils
 Priority: optional
 Maintainer: Chris Lamb <chris@chris-lamb.co.uk>
 Build-Depends: debhelper (>= 5), automake, autotools-dev, pkg-config, libmtp-dev, libfuse-dev, libmad0-dev, libid3tag0-dev, libglib2.0-dev
