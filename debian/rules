@@ -12,19 +12,14 @@ else
 	CFLAGS += -O2
 endif
 
-upstream:
-	# Requires: subversion
-	set -eu; \
-		VERSION=`dpkg-parsechangelog | awk '/Version:/ {print $$2}' | sed 's/-[0-9]*$\//g'`; \
-		TAR=mtpfs_$$VERSION.orig.tar; \
-		TEMPDIR=`mktemp -d`; \
-		cd $$TEMPDIR; \
-		svn co http://mtpfs.googlecode.com/svn/trunk/ mtpfs; \
-		find . -depth -type d -name ".svn" -exec rm -rf {} \; ; \
-		tar cvvf $$TAR mtpfs; \
-		gzip -9 $$TAR; \
-		rm -rf mtpfs/; \
-		echo "Upstream tarball: $$TEMPDIR/$$TAR.gz"
+get-orig-source:
+	set -e; \
+		PKG=mtpfs; VER=0.8; \
+		svn co http://mtpfs.googlecode.com/svn/trunk/ $$PKG; \
+		REVISION=`svnversion $$PKG`; \
+		find $$PKG -depth -type d -name ".svn" | xargs rm -rf; \
+		tar cfz $${PKG}_$${VER}+svn$${REVISION}.orig.tar.gz $$PKG; \
+		rm -rf $$PKG
 
 build: build-stamp
 build-stamp:
