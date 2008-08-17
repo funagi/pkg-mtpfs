@@ -1,8 +1,9 @@
 mtpfs (0.8+svn11-2) unstable; urgency=low
 
   * Correcting section ("interpreters" -> "utils")
+  * Move to debhelper 7.
 
- -- Chris Lamb <chris@chris-lamb.co.uk>  Sun, 17 Aug 2008 21:18:56 +0100
+ -- Chris Lamb <chris@chris-lamb.co.uk>  Sun, 17 Aug 2008 21:21:11 +0100
 
 mtpfs (0.8+svn11-1) unstable; urgency=low
 
