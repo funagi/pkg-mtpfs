@@ -2,6 +2,7 @@ mtpfs (0.9-1) experimental; urgency=low
 
   * New upstream release to experimental due to dependency on experimental
     libmtp.
+  * Don't re-autogen anymore.
 
  -- Chris Lamb <lamby@debian.org>  Mon, 29 Dec 2008 21:20:19 +0000
 
