@@ -1,4 +1,4 @@
-mtpfs (0.9-1) UNRELEASED; urgency=low
+mtpfs (0.9-1) unstable; urgency=low
 
   * New upstream release.
     - Update Build-Depends on libmtp.
@@ -14,7 +14,7 @@ mtpfs (0.9-1) UNRELEASED; urgency=low
   * Move to debhelper 7.
     - Replace call to `dh_clean -k' with dh_prep.
 
- -- Chris Lamb <lamby@debian.org>  Sun, 17 Aug 2008 21:59:17 +0100
+ -- Chris Lamb <lamby@debian.org>  Mon, 23 Feb 2009 06:58:05 +0000
 
 mtpfs (0.8+svn11-1) unstable; urgency=low
 
