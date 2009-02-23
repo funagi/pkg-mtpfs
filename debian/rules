@@ -57,6 +57,7 @@ binary-arch: build install
 	dh_installchangelogs
 	dh_installman debian/manpages/mtpfs.1
 	dh_link usr/bin/mtpfs sbin/mount.mtpfs
+	dh_link usr/share/man/man1/mtpfs.1 usr/share/man/man1/mount.mtpfs.1
 	dh_strip
 	dh_compress
 	dh_fixperms
