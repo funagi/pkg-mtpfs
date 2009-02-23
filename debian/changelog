@@ -1,6 +1,7 @@
 mtpfs (0.9-1) UNRELEASED; urgency=low
 
   * New upstream release.
+    - Update Build-Depends on libmtp.
   * Update Git respository locations.
   * New maintainer email address.
   * Correcting section ("interpreters" -> "utils")
