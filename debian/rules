@@ -12,7 +12,7 @@ endif
 
 get-orig-source:
 	set -e; \
-		PKG=mtpfs; VER=0.8; \
+		PKG=mtpfs; VER=0.9; \
 		svn co http://mtpfs.googlecode.com/svn/trunk/ $$PKG; \
 		REVISION=`svnversion $$PKG`; \
 		find $$PKG -depth -type d -name ".svn" | xargs rm -rf; \
