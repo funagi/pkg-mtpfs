@@ -1,6 +1,7 @@
 mtpfs (0.9-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * Update Git respository locations.
   * Correcting section ("interpreters" -> "utils")
   * Move to debhelper 7.
   * Bump Standards-Version to 3.8.0.
