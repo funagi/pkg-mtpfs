@@ -7,6 +7,7 @@ mtpfs (0.9-1) UNRELEASED; urgency=low
   * New maintainer email address.
   * Correcting section ("interpreters" -> "utils")
   * Move to debhelper 7.
+    - Replace call to `dh_clean -k' with dh_prep.
   * Bump Standards-Version to 3.8.0.
   * Rework and rename 'get-orig-source' target.
   * Add /sbin/mount.mtpfs symlink for fstab integration.
