@@ -12,6 +12,7 @@ mtpfs (0.9-1) UNRELEASED; urgency=low
   * Rework and rename 'get-orig-source' target.
   * Add /sbin/mount.mtpfs symlink for fstab integration.
     - Symlink mount.mtpfs.1 to existing mtpfs.1 to avoid a lintian warning.
+  * Use the "©" symbol over "(C)" in debian/copyright to appease lintian.
 
  -- Chris Lamb <lamby@debian.org>  Sun, 17 Aug 2008 21:59:17 +0100
 
