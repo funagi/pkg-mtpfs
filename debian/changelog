@@ -1,7 +1,6 @@
-mtpfs (0.8+svn17-1) unstable; urgency=low
+mtpfs (0.9-1) UNRELEASED; urgency=low
 
-  * New upstream snapshot.
-    - Version Build-Depends on libmtp (>= 0.3.0)
+  * New upstream release.
   * Correcting section ("interpreters" -> "utils")
   * Move to debhelper 7.
   * Bump Standards-Version to 3.8.0.
