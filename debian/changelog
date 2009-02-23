@@ -3,16 +3,16 @@ mtpfs (0.9-1) UNRELEASED; urgency=low
   * New upstream release.
     - Update Build-Depends on libmtp.
     - Don't call autogen.sh anymore - drop Build-Depends on automake.
-  * Update Git respository locations.
-  * New maintainer email address.
-  * Correcting section ("interpreters" -> "utils")
-  * Move to debhelper 7.
-    - Replace call to `dh_clean -k' with dh_prep.
-  * Bump Standards-Version to 3.8.0.
-  * Rework and rename 'get-orig-source' target.
   * Add /sbin/mount.mtpfs symlink for fstab integration.
     - Symlink mount.mtpfs.1 to existing mtpfs.1 to avoid a lintian warning.
+  * New maintainer email address.
+  * Update Git repository locations.
+  * Correcting section ("interpreters" -> "utils")
+  * Rework and rename 'get-orig-source' target.
   * Use the "©" symbol over "(C)" in debian/copyright to appease lintian.
+  * Bump Standards-Version to 3.8.0.
+  * Move to debhelper 7.
+    - Replace call to `dh_clean -k' with dh_prep.
 
  -- Chris Lamb <lamby@debian.org>  Sun, 17 Aug 2008 21:59:17 +0100
 
