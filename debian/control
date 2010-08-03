@@ -2,7 +2,7 @@ Source: mtpfs
 Section: utils
 Priority: optional
 Maintainer: Chris Lamb <lamby@debian.org>
-Build-Depends: debhelper (>= 7), libmtp-dev (>= 0.3.0), autotools-dev, libfuse-dev, libmad0-dev, libid3tag0-dev, libglib2.0-dev
+Build-Depends: debhelper (>= 7), libmtp-dev (>= 1.0.3), autotools-dev, libfuse-dev, libmad0-dev, libid3tag0-dev, libglib2.0-dev
 Standards-Version: 3.8.0
 Vcs-Git: git://git.chris-lamb.co.uk/debian/pkg-mtpfs.git
 Vcs-Browser: http://git.chris-lamb.co.uk/?p=debian/pkg-mtpfs.git
