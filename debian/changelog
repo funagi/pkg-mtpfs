@@ -1,11 +1,11 @@
-mtpfs (0.9-3) UNRELEASED; urgency=low
+mtpfs (0.9-3) unstable; urgency=low
 
   * Bump dependency on libmtp-dev (and implicitly rebuild) to fix segmentation
     faults on mount (Closes: #576460)
   * Bump Standards-Version to 3.9.1.
   * Move to '3.0 (quilt)' source format.
 
- -- Chris Lamb <lamby@debian.org>  Tue, 03 Aug 2010 18:47:16 -0400
+ -- Chris Lamb <lamby@debian.org>  Tue, 03 Aug 2010 18:51:17 -0400
 
 mtpfs (0.9-2) unstable; urgency=low
 
