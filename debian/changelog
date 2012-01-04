@@ -1,4 +1,4 @@
-mtpfs (1.0-1) UNRELEASED; urgency=low
+mtpfs (1.0-1) unstable; urgency=low
 
   * New upstream version (Closes: #652937)
   * Add patch to fix multi-hierarchy folder trees (Closes: #652940)
@@ -7,7 +7,7 @@ mtpfs (1.0-1) UNRELEASED; urgency=low
   * Update debian/watch file.
   * Move to Debhelper 7 format.
 
- -- Chris Lamb <lamby@debian.org>  Wed, 04 Jan 2012 01:32:15 +0000
+ -- Chris Lamb <lamby@debian.org>  Wed, 04 Jan 2012 01:57:03 +0000
 
 mtpfs (0.9-3) unstable; urgency=low
 
