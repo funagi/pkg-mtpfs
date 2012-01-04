@@ -5,6 +5,7 @@ mtpfs (1.0-1) UNRELEASED; urgency=low
   * Update Vcs-{Browser,Git}.
   * Bump Standards-Version to 3.9.2.
   * Update debian/watch file.
+  * Move to Debhelper 7 format.
 
  -- Chris Lamb <lamby@debian.org>  Wed, 04 Jan 2012 01:32:15 +0000
 
