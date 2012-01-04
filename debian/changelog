@@ -1,6 +1,7 @@
 mtpfs (1.0-1) UNRELEASED; urgency=low
 
   * New upstream version (Closes: #652937)
+  * Add patch to fix multi-hierarchy folder trees (Closes: #652940)
   * Update Vcs-{Browser,Git}.
   * Bump Standards-Version to 3.9.2.
   * Update debian/watch file.
