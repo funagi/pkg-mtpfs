@@ -1,10 +1,11 @@
-mtpfs (0.9-4) UNRELEASED; urgency=low
+mtpfs (1.0-1) UNRELEASED; urgency=low
 
+  * New upstream version (Closes: #652937)
   * Update Vcs-{Browser,Git}.
   * Bump Standards-Version to 3.9.2.
   * Update debian/watch file.
 
- -- Chris Lamb <lamby@debian.org>  Sat, 26 Feb 2011 22:05:07 +0000
+ -- Chris Lamb <lamby@debian.org>  Wed, 04 Jan 2012 01:32:15 +0000
 
 mtpfs (0.9-3) unstable; urgency=low
 
