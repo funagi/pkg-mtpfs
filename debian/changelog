@@ -2,6 +2,7 @@ mtpfs (0.9-4) UNRELEASED; urgency=low
 
   * Update Vcs-{Browser,Git}.
   * Bump Standards-Version to 3.9.2.
+  * Update debian/watch file.
 
  -- Chris Lamb <lamby@debian.org>  Sat, 26 Feb 2011 22:05:07 +0000
 
