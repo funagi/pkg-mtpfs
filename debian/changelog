@@ -1,3 +1,9 @@
+mtpfs (1.0-2) UNRELEASED; urgency=low
+
+  * Update debian/watch.
+
+ -- Chris Lamb <lamby@debian.org>  Fri, 06 Apr 2012 19:07:26 +0100
+
 mtpfs (1.0-1) unstable; urgency=low
 
   * New upstream version (Closes: #652937)

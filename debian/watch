@@ -1,2 +1,2 @@
 version=3
-http://www.adebenham.com/mtpfs/ /debian/mtpfs-(.+).tar.gz
+http://www.adebenham.com/mtpfs/ /files/mtp/mtpfs-(.+).tar.gz
