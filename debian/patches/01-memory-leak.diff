@@ -1,0 +1,19 @@
+--- a/mtpfs.c.~1~	2012-02-27 01:59:39.000000000 +0100
++++ b/mtpfs.c	2012-04-07 11:40:55.291749801 +0200
+@@ -606,7 +606,7 @@
+                 DBG("Problem sending %s - %d",path,ret);
+             }
+             // Cleanup
+-			if (item && item->data)
++			if (item->data)
+ 				g_free (item->data);
+             myfiles = g_slist_remove (myfiles, item->data);
+             g_strfreev (fields);
+@@ -989,6 +989,7 @@
+                             path = strcat (path,file->filename);
+                             fprintf (filetmp,"%s\n",path);
+                             DBG("%s\n",path);
++                            g_free (name);
+                         }
+                     }
+                     //LIBMTP_destroy_file_t(file);
