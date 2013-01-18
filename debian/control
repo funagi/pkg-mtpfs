@@ -10,7 +10,7 @@ Homepage: http://www.adebenham.com/mtpfs/
 
 Package: mtpfs
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, fuse-utils
+Depends: ${shlibs:Depends}, ${misc:Depends}, fuse
 Description: FUSE filesystem for Media Transfer Protocol devices
  MTPfs is a FUSE filesystem that supports reading and writing from MTP (Media
  Transfer Protocol) devices, such as MP3 players, video players or digital
